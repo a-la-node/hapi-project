@@ -1,0 +1,33 @@
+{
+  "name": "hapi-project",
+  "version": "1.0.0",
+  "description": "## What? - Create a templated web app using hapi - Utilise 2 APIs - random name generator and nomad - finding working and living space - Strong test coverage",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-la-node/hapi-project.git"
+  },
+  "author": "Tom Cleo Peter Ewelina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-la-node/hapi-project/issues"
+  },
+  "homepage": "https://github.com/a-la-node/hapi-project#readme",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "hapi": "^15.2.0",
+    "inert": "^4.0.2",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "tape": "^4.6.2"
+  }
+}
