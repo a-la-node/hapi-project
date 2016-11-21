@@ -1,5 +1,7 @@
 (function(){
   'use strict';
+
+// API for random identity generator
 var getNewIdentity = new XMLHttpRequest();
 
 getNewIdentity.onreadystatechange = () => {
@@ -10,5 +12,18 @@ getNewIdentity.onreadystatechange = () => {
 
 getNewIdentity.open('GET', 'https://randomuser.me/api/');
 getNewIdentity.send();
+
+// API for working location
+var getNewLocation = new XMLHttpRequest();
+
+getNewLocation.onreadystatechange = () => {
+  if ( getNewLocation.readyState === 4 && getNewLocation.status === 200 ) {
+    document.getElementsByClassName('city')[0].innerHTML = JSON.parse(getNewLocation.response);
+  }
+};
+
+getNewIdentity.open('GET', 'https://nomadlist.com/api/v2/list/cities');
+getNewIdentity.send();
+
 
 }());
