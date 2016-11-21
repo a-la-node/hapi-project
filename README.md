@@ -1,8 +1,7 @@
 # hapi-project
 
 ![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
-![prototype gif](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiProto.gif)
-
+![prototype gif](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif)
 
 ## What?
 - Create a templated web app using hapi
