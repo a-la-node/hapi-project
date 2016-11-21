@@ -36,3 +36,8 @@ so that... I can trick the people I encounter and obtain crucial insider informa
 - Host the project on heroku
 - Try to use basic ES6 syntax
 - Pair programming
+
+
+## Stretch Goals
+- Tailor users' results to their custom preferences
+- Display users' results in a more visually organised/ appealing way (hide irrelevant options)
