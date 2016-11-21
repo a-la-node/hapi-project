@@ -6,17 +6,15 @@
     <title>Disguised</title>
   </head>
   <body>
-    <h1> DISGUISED </h1>
-    <p> You are a...</p>
-    <ul>
-      <li>Spy</li>
-      <li>Rehabilitating Criminal</li>
-      <li>Witness in need of protection</li>
-      <li>Spouse on the down-low</li>
-      <li>Z-list celebrity</li>
-      <li>Business Executive in search of a tax haven</li>
-    </ul>
-    <button>Generate Solution</button>
+    <div class="container">
+      <h1> DISGUISED </h1>
+      <p> You are a...</p>
+      <ul>
+        {{#each people}}
+          {{{link this}}}
+        {{/each}}
+      </ul>
+      </div>
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
