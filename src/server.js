@@ -2,6 +2,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Handlebars = require('handlebars');
 const Vision = require('vision');
+const getNewIdentity = require('./index.js');
 
 const server = new Hapi.Server();
 
@@ -29,6 +30,18 @@ let routes = [
       directory: {
         path: 'public'
       }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/results',
+    handler: (request, reply) => {
+      var params = request.query;
+      getNewIdentity.getNewIdentity(function(name){
+        reply(`Hello! ${name}`)
+        console.log(`Hello! ${name} in handler`)
+      });
+      console.log(params);
     }
   }
 ];
