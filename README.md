@@ -5,9 +5,9 @@
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 [![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 
-![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
+![mockup image](public/images/HapiAppMockup.png)
 
-[UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
+[UX Prototype](public/images/proto.gif)
 
 ## What?
 - Create a templated web app using hapi
@@ -50,3 +50,21 @@ so that... I can trick the people I encounter and obtain crucial insider informa
 ## Stretch Goals
 - Tailor users' results to their custom preferences
 - Display users' results in a more visually organised/ appealing way (hide irrelevant options)
+
+## Setup
+- To install npm dependencies:
+```
+npm install
+```
+- To run the server:
+```
+npm run start
+```
+- To run tests:
+```
+npm test
+```
+- To check code coverage run:
+```
+npm run coverage
+```
