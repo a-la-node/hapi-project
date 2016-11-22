@@ -34,9 +34,9 @@ let routes = [
     method: 'GET',
     path: '/results',
     handler: (request, reply) => {
-      var params = request.query;
-      getNewIdentity.getNewName(function(name){
-        getNewIdentity.getNewPlace(params.type, function(place){
+      let params = request.query;
+      getNewIdentity.getNewName(function(error, name){
+        getNewIdentity.getNewPlace(params.type, function(error, place){
           reply.view('results-page', {
             name: name,
             place: place
