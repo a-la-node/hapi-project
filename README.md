@@ -1,5 +1,7 @@
 # hapi-project
 
+[![Build Status](https://travis-ci.org/a-la-node/hapi-project.svg?branch=master)](https://travis-ci.org/a-la-node/hapi-project)
+
 ![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
 
 [UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
