@@ -1,26 +1,24 @@
-var Hapi = require('hapi');
-var Inert = require('inert');
-var Handlebars = require('handlebars');
-var Vision = require('vision');
-var getNewIdentity = require('./index.js');
+const Hapi = require('hapi');
+const Inert = require('inert');
+const Vision = require('vision');
+const Handlebars = require('handlebars');
+const getNewIdentity = require('./index.js');
+const people = require('./people');
 
 var server = new Hapi.Server();
 
-var routes = [
+function buildPeopleDescriptions(listOfPeople) {
+  return Object.keys(listOfPeople).map(person => {
+    return {type: person, description: people[person].description};
+  });
+}
+
+let routes = [
   {
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      reply.view('index', {
-        people: [
-          {type: 'spy', description: 'Spy'},
-          {type: 'criminal', description: 'Rehabilitating criminal'},
-          {type: 'witness', description: 'Witness in need of protection'},
-          {type: 'spouse', description: 'Spouse on the down-low'},
-          {type: 'celeb', description: 'Z-list celebrity'},
-          {type: 'exec', description: 'Business executive in search of a tax haven'}
-        ]
-      });
+      reply.view('index', {people: buildPeopleDescriptions(people)});
     }
   },
   {
@@ -58,6 +56,7 @@ server.register(Vision, err => {
     relativeTo: __dirname + '/../',
     path: 'public',
     layoutPath: 'public/layout',
+    helpersPath: 'public/helpers',
     layout: 'default'
   });
 });
@@ -73,10 +72,6 @@ server.register(Inert, ()=> {
     if (err) throw err;
     console.log('server running at: ' + port);
   });
-});
-
-Handlebars.registerHelper('link', person => {
-  return `<a class='content--options-item' href='results?type=${person.type}'><li>${person.description}</li></a>`;
 });
 
 module.exports = server;
