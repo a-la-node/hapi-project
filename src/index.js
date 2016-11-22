@@ -4,12 +4,15 @@ const params = require('./params');
 
 function getNewName (cb) {
   request('https://randomuser.me/api/', (error, response, body) => {
+    if (error) {
+      return cb(error)
+    };
     if (!error && response.statusCode === 200) {
       var name = JSON.parse(body).results[0].name;
       var firstName = capitalise(name.first);
       var lastName = capitalise(name.last);
       var fullName = `${firstName} ${lastName}`;
-      return cb(fullName);
+      return cb(null, fullName);
     }
   });
 }
@@ -21,7 +24,7 @@ function getNewPlace (type, cb) {
     if (!error && response.statusCode === 200) {
       let cities = JSON.parse(body).slugs;
       let randomCity = cities[Math.floor(Math.random() * cities.length)];
-      return cb(randomCity.split('-').map(word => capitalise(word)).join(' '));
+      return cb(null, randomCity.split('-').map(word => capitalise(word)).join(' '));
     }
   });
 }

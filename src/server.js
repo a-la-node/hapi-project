@@ -37,8 +37,8 @@ let routes = [
     path: '/results',
     handler: (request, reply) => {
       let params = request.query;
-      getNewIdentity.getNewName(function(name){
-        getNewIdentity.getNewPlace(params.type, function(place){
+      getNewIdentity.getNewName(function(error, name){
+        getNewIdentity.getNewPlace(params.type, function(error, place){
           reply.view('results-page', {
             name: name,
             place: place
