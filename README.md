@@ -1,5 +1,9 @@
 # hapi-project
 
+![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
+
+[UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
+
 ## What?
 - Create a templated web app using hapi
 - Utilise 2 APIs - random name generator and nomad - finding working and living space
