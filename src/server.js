@@ -36,18 +36,15 @@ let routes = [
     method: 'GET',
     path: '/results',
     handler: (request, reply) => {
-      var params = request.query;
+      let params = request.query;
       getNewIdentity.getNewName(function(name){
-        console.log(`Hello! ${name} in handler`);
-        getNewIdentity.getNewPlace(function(place){
-          console.log(place);
+        getNewIdentity.getNewPlace(params.type, function(place){
           reply.view('results-page', {
             name: name,
             place: place
-          })
+          });
         });
       });
-    //  console.log(params);
     }
   }
 ];
