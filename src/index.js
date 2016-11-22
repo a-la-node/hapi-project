@@ -6,8 +6,8 @@ function getNewName (cb) {
   request('https://randomuser.me/api/', (error, response, body) => {
     if (!error && response.statusCode === 200) {
       var name = JSON.parse(body).results[0].name;
-      var firstName = capitalizeFirstLetter(name.first);
-      var lastName = capitalizeFirstLetter(name.last);
+      var firstName = capitalise(name.first);
+      var lastName = capitalise(name.last);
       var fullName = `${firstName} ${lastName}`;
       return cb(fullName);
     }
@@ -21,25 +21,14 @@ function getNewPlace (cb) {
   request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
       let cities = JSON.parse(body).slugs;
-      let randomCity = Math.floor(Math.random() * cities.length);
-      return cb(cities[randomCity]);
+      let randomCity = cities[Math.floor(Math.random() * cities.length)];
+      return cb(randomCity.split('-').map(word => capitalise(word)).join(' '));
     }
   });
 }
 
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function unsafest(array){
-  var dangerousCity = '';
-  array.forEach(function(a){if (a.scores.safety < 0.22){
-    dangerousCity += ' ' + a.info.city.name + ' in ' + a.info.country.name;
-  }})
-  dangerousCity.split(' ')
-  var city = dangerousCity.split(' ')[Math.floor(Math.random() * 36) + 0 ];
-  console.log(city);
-  return city;
+function capitalise(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 module.exports = {
