@@ -1,4 +1,3 @@
-'use strict';
 const request = require('request');
 const people = require('./people');
 
@@ -15,12 +14,12 @@ function getNewName (cb) {
 }
 
 function getNewPlace (type, cb) {
-  let person = params[type];
-  let url = `https://nomadlist.com/api/v2/filter/city?c=2&f1_target=safety_level&f1_type=${person.safety}&f2_target=long_term_cost_in_usd&f2_type=${person.budget}`;
+  var person = people[type];
+  var url = `https://nomadlist.com/api/v2/filter/city?c=2&f1_target=safety_level&f1_type=${person.safety}&f2_target=long_term_cost_in_usd&f2_type=${person.budget}`;
   request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      let cities = JSON.parse(body).slugs;
-      let randomCity = cities[Math.floor(Math.random() * cities.length)];
+      var cities = JSON.parse(body).slugs;
+      var randomCity = cities[Math.floor(Math.random() * cities.length)];
       return cb(randomCity.split('-').map(word => capitalise(word)).join(' '));
     }
   });

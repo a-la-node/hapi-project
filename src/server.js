@@ -5,7 +5,7 @@ const Handlebars = require('handlebars');
 const getNewIdentity = require('./index.js');
 const people = require('./people');
 
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
 function buildPeopleDescriptions(listOfPeople) {
   return Object.keys(listOfPeople).map(person => {
@@ -34,7 +34,7 @@ let routes = [
     method: 'GET',
     path: '/results',
     handler: (request, reply) => {
-      let params = request.query;
+      var params = request.query;
       getNewIdentity.getNewName(function(name){
         getNewIdentity.getNewPlace(params.type, function(place){
           reply.view('results-page', {
@@ -62,7 +62,7 @@ server.register(Vision, err => {
 });
 
 server.register(Inert, ()=> {
-  let port = process.env.PORT || 8000;
+  var port = process.env.PORT || 8000;
   server.connection({
     port,
     host: 'localhost'

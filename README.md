@@ -1,5 +1,10 @@
 # hapi-project
 
+[![Build Status](https://travis-ci.org/a-la-node/hapi-project.svg?branch=master)](https://travis-ci.org/a-la-node/hapi-project)
+[![codecov](https://codecov.io/gh/a-la-node/hapi-project/branch/master/graph/badge.svg)](https://codecov.io/gh/a-la-node/hapi-project)
+[![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
+[![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
+
 ![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
 
 [UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
