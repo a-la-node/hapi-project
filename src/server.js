@@ -10,7 +10,7 @@ let routes = [
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      reply.view('index.html', {
+      reply.view('index', {
         people: [
           {type: 'spy', description: 'Spy'},
           {type: 'criminal', description: 'Rehabilitating criminal'},
@@ -39,7 +39,10 @@ server.register(Vision, err => {
     engines: {
       html: Handlebars
     },
-    path: __dirname + '/../public'
+    relativeTo: __dirname + '/../',
+    path: 'public',
+    layoutPath: 'public/layout',
+    layout: 'default'
   });
 });
 
