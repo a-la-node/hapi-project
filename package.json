@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "PORT=8001 node_modules/tape/bin/tape tests/*.js",
+    "test": "PORT=8001 ./node_modules/tape/bin/tape tests/*.js",
     "start": "nodemon src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover tests/*.js && istanbul report lcov && codecov",
+    "coverage": "./node_modules/.bin/istanbul cover tests/*.js",
     "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
   "repository": {
