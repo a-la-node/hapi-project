@@ -1,9 +1,12 @@
 <div class="container">
-  <h1> DISGUISED </h1>
-  <p> You are a...</p>
-  <ul>
-    {{#each people}}
-    {{{link this}}}
-    {{/each}}
-  </ul>
+  <h1 class="title"> DISGUISED </h1>
+  <img src="images/background.jpg" class="main-image">
+  <div class="content overlay">
+    <p> You are a...</p>
+    <ul class="content--options">
+      {{#each people}}
+        {{{link this}}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
