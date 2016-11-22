@@ -5,9 +5,9 @@
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 [![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 
-![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
+![mockup image](public/images/HapiAppMockup.png)
 
-[UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
+[UX Prototype](public/images/proto.gif)
 
 ## What?
 - Create a templated web app using hapi
