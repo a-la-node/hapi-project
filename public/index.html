@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./main.css">
-    <title>Disguised</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1> DISGUISED </h1>
-      <p> You are a...</p>
-      <ul>
-        {{#each people}}
-          {{{link this}}}
-        {{/each}}
-      </ul>
-      </div>
-    <script type="text/javascript" src="index.js"></script>
-  </body>
-</html>
+<div class="container">
+  <h1> DISGUISED </h1>
+  <p> You are a...</p>
+  <ul>
+    {{#each people}}
+    {{{link this}}}
+    {{/each}}
+  </ul>
+</div>
