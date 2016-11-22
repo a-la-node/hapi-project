@@ -2,14 +2,14 @@
   "name": "hapi-project",
   "version": "1.0.0",
   "description": "## What? - Create a templated web app using hapi - Utilise 2 APIs - random name generator and nomad - finding working and living space - Strong test coverage",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "PORT=8001 node_modules/tape/bin/tape tests/*.js",
     "start": "nodemon src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover src/test/*.js && istanbul report lcov && codecov",
+    "coverage": "./node_modules/.bin/istanbul cover tests/*.js && istanbul report lcov && codecov",
     "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
   "repository": {
@@ -30,8 +30,8 @@
     "vision": "^4.1.0"
   },
   "devDependencies": {
-    "env2": "^2.1.1",
     "codecov": "^1.0.1",
+    "env2": "^2.1.1",
     "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
     "tape": "^4.6.2"
