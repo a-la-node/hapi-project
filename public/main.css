@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family:'Special Elite', cursive;
 }
 
 p, a, h1 {
@@ -39,4 +40,3 @@ li {
     line-height: 2em;
     font-size: 1.2em;
 }
-
