@@ -1,12 +1,12 @@
-const Hapi = require('hapi');
-const Inert = require('inert');
-const Handlebars = require('handlebars');
-const Vision = require('vision');
-const getNewIdentity = require('./index.js');
+var Hapi = require('hapi');
+var Inert = require('inert');
+var Handlebars = require('handlebars');
+var Vision = require('vision');
+var getNewIdentity = require('./index.js');
 
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
-let routes = [
+var routes = [
   {
     method: 'GET',
     path: '/',
@@ -36,7 +36,7 @@ let routes = [
     method: 'GET',
     path: '/results',
     handler: (request, reply) => {
-      let params = request.query;
+      var params = request.query;
       getNewIdentity.getNewName(function(name){
         getNewIdentity.getNewPlace(params.type, function(place){
           reply.view('results-page', {
@@ -63,7 +63,7 @@ server.register(Vision, err => {
 });
 
 server.register(Inert, ()=> {
-  let port = process.env.PORT || 8000;
+  var port = process.env.PORT || 8000;
   server.connection({
     port,
     host: 'localhost'
