@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "PORT=8001 ./node_modules/tape/bin/tape tests/*.js",
-    "start": "nodemon src/server.js",
+    "start": "node src/server.js",
     "coverage": "./node_modules/.bin/istanbul cover tests/*.js -t $CODECOV_TOKEN",
     "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
