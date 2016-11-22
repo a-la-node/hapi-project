@@ -50,3 +50,21 @@ so that... I can trick the people I encounter and obtain crucial insider informa
 ## Stretch Goals
 - Tailor users' results to their custom preferences
 - Display users' results in a more visually organised/ appealing way (hide irrelevant options)
+
+## Setup
+- To install npm dependencies:
+```
+npm install
+```
+- To run the server:
+```
+npm run start
+```
+- To run tests:
+```
+npm test
+```
+- To check code coverage run:
+```
+npm run coverage
+```
