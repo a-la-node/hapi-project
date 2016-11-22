@@ -1,5 +1,6 @@
 'use strict';
 const request = require('request');
+const params = require('./params');
 
 function getNewName (cb) {
   request('https://randomuser.me/api/', (error, response, body) => {
@@ -14,15 +15,14 @@ function getNewName (cb) {
 }
 
 function getNewPlace (cb) {
-  request('https://nomadlist.com/api/v2/list/cities', (error, response, body) => {
+  let type = 'witness';
+  let person = params[type];
+  let url = `https://nomadlist.com/api/v2/filter/city?c=2&f1_target=safety_level&f1_type=${person.safety}&f2_target=long_term_cost_in_usd&f2_type=${person.budget}`;
+  request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      //var city = JSON.parse(body).result[0].info.city.name;
-      var safety = JSON.parse(body).result[0].scores.safety;
-      var country = JSON.parse(body).result[0].info.country.name;
-      var location = `${unsafest(JSON.parse(body).result)}`;
-      //unsafest(JSON.parse(body).result)
-      console.log(location);
-      return cb(location);
+      let cities = JSON.parse(body).slugs;
+      let randomCity = Math.floor(Math.random() * cities.length);
+      return cb(cities[randomCity]);
     }
   });
 }
