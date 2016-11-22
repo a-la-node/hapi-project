@@ -1,5 +1,7 @@
 # hapi-project
 
+Website hosted on Heroku [here](https://hapi-appi.herokuapp.com/).
+
 [![Build Status](https://travis-ci.org/a-la-node/hapi-project.svg?branch=master)](https://travis-ci.org/a-la-node/hapi-project)
 [![codecov](https://codecov.io/gh/a-la-node/hapi-project/branch/master/graph/badge.svg)](https://codecov.io/gh/a-la-node/hapi-project)
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
