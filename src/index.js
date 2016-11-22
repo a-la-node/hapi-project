@@ -1,6 +1,6 @@
 'use strict';
 const request = require('request');
-const params = require('./params');
+const people = require('./people');
 
 function getNewName (cb) {
   request('https://randomuser.me/api/', (error, response, body) => {
