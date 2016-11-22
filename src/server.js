@@ -37,11 +37,14 @@ let routes = [
     path: '/results',
     handler: (request, reply) => {
       var params = request.query;
-      getNewIdentity.getNewIdentity(function(name){
-        reply(`Hello! ${name}`)
-        console.log(`Hello! ${name} in handler`)
+      getNewIdentity.getNewName(function(name){
+        console.log(`Hello! ${name} in handler`);
+        getNewIdentity.getNewPlace(function(place){
+          console.log(place);
+          reply(`${name} ${place}`)
+        });
       });
-      console.log(params);
+    //  console.log(params);
     }
   }
 ];

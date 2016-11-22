@@ -1,7 +1,7 @@
 'use strict';
 const request = require('request');
 
-function getNewIdentity (cb) {
+function getNewName (cb) {
   request('https://randomuser.me/api/', (error, response, body) => {
     if (!error && response.statusCode === 200) {
       var name = JSON.parse(body).results[0].name;
@@ -13,13 +13,23 @@ function getNewIdentity (cb) {
   });
 }
 
+function getNewPlace (cb) {
+  request('https://nomadlist.com/api/v2/list/cities', (error, response, body) => {
+    if (!error && response.statusCode === 200) {
+      var name = JSON.parse(body).result[0].info.city.name;
+      return cb(name);
+    }
+  });
+}
+
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
 module.exports = {
-  getNewIdentity: getNewIdentity
+  getNewName: getNewName,
+  getNewPlace: getNewPlace
 };
 
 // // API for working location
