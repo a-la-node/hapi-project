@@ -3,7 +3,7 @@ body {
   font-family:'Special Elite', cursive;
 }
 
-p, a, h1 {
+p, a, h1, h2 {
     color: white;
 }
 
@@ -49,4 +49,15 @@ p {
 .content--options-item:hover {
   color: #cc1414;
   font-weight:800;
+}
+
+.stamp {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.5;
+  transform: rotate(-15deg);
+}
+
+.result-description {
+  font-size: 1em;
 }
