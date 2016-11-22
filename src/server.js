@@ -76,7 +76,7 @@ server.register(Inert, ()=> {
 });
 
 Handlebars.registerHelper('link', person => {
-  return `<a href='results?type=${person.type}'><li>${person.description}</li></a>`;
+  return `<a class='content--options-item' href='results?type=${person.type}'><li>${person.description}</li></a>`;
 });
 
 module.exports = server;

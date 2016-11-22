@@ -15,6 +15,10 @@ li {
     list-style-type: none;
 }
 
+p {
+  font-size: 1.6em;
+}
+
 .container {
     max-width: 80%;
     margin: auto;
@@ -22,6 +26,7 @@ li {
 }
 .title {
     color: white;
+    font-size: 3em;
 }
 
 .main-image {
@@ -39,4 +44,9 @@ li {
 .content--options {
     line-height: 2em;
     font-size: 1.2em;
+}
+
+.content--options-item:hover {
+  color: #cc1414;
+  font-weight:800;
 }
