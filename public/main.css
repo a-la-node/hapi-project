@@ -35,6 +35,22 @@ p {
     z-index: -1;
 }
 
+.main-image img {
+    max-width: 100%;
+}
+
+.main-image:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset -64px 10px 170px 152px rgba(0,0,0,0.75);
+    border-radius: 50% / 40%;
+}
+
 .overlay {
     position: absolute;
     top: 300%;
