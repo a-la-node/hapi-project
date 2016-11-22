@@ -41,7 +41,10 @@ let routes = [
         console.log(`Hello! ${name} in handler`);
         getNewIdentity.getNewPlace(function(place){
           console.log(place);
-          reply(`${name} ${place}`)
+          reply.view('results-page', {
+            name: name,
+            place: place
+          })
         });
       });
     //  console.log(params);
