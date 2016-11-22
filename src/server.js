@@ -11,7 +11,7 @@ let routes = [
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-      reply.view('index.html', {
+      reply.view('index', {
         people: [
           {type: 'spy', description: 'Spy'},
           {type: 'criminal', description: 'Rehabilitating criminal'},
@@ -52,12 +52,15 @@ server.register(Vision, err => {
     engines: {
       html: Handlebars
     },
-    path: __dirname + '/../public'
+    relativeTo: __dirname + '/../',
+    path: 'public',
+    layoutPath: 'public/layout',
+    layout: 'default'
   });
 });
 
 server.register(Inert, ()=> {
-  let port = process.env.port || 8000;
+  let port = process.env.PORT || 8000;
   server.connection({
     port,
     host: 'localhost'
@@ -72,3 +75,5 @@ server.register(Inert, ()=> {
 Handlebars.registerHelper('link', person => {
   return `<a href='results?type=${person.type}'><li>${person.description}</li></a>`;
 });
+
+module.exports = server;
