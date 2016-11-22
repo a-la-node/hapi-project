@@ -1,3 +1,42 @@
 body {
-  background-color: grey;
+  background-color: black;
 }
+
+p, a, h1 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+}
+.title {
+    color: white;
+}
+
+.main-image {
+    max-width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 300%;
+    right: 50%;
+}
+
+.content--options {
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
