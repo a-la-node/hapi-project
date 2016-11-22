@@ -16,8 +16,13 @@ function getNewName (cb) {
 function getNewPlace (cb) {
   request('https://nomadlist.com/api/v2/list/cities', (error, response, body) => {
     if (!error && response.statusCode === 200) {
-      var name = JSON.parse(body).result[0].info.city.name;
-      return cb(name);
+      //var city = JSON.parse(body).result[0].info.city.name;
+      var safety = JSON.parse(body).result[0].scores.safety;
+      var country = JSON.parse(body).result[0].info.country.name;
+      var location = `${unsafest(JSON.parse(body).result)}`;
+      //unsafest(JSON.parse(body).result)
+      console.log(location);
+      return cb(location);
     }
   });
 }
@@ -26,20 +31,18 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function unsafest(array){
+  var dangerousCity = '';
+  array.forEach(function(a){if (a.scores.safety < 0.22){
+    dangerousCity += ' ' + a.info.city.name + ' in ' + a.info.country.name;
+  }})
+  dangerousCity.split(' ')
+  var city = dangerousCity.split(' ')[Math.floor(Math.random() * 36) + 0 ];
+  console.log(city);
+  return city;
+}
 
 module.exports = {
   getNewName: getNewName,
   getNewPlace: getNewPlace
 };
-
-// // API for working location
-// var getNewLocation = new XMLHttpRequest();
-//
-// getNewLocation.onreadystatechange = () => {
-//   if ( getNewLocation.readyState === 4 && getNewLocation.status === 200 ) {
-//     document.getElementsByClassName('city')[0].innerHTML = JSON.parse(getNewLocation.response);
-//   }
-// };
-//
-// getNewIdentity.open('GET', 'https://nomadlist.com/api/v2/list/cities');
-// getNewIdentity.send();
