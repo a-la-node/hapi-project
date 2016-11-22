@@ -9,9 +9,9 @@ test("Check that getNewName doesn't create an error", t => {
 })
 
 test("Check that getNewPlace doesn't create an error", t => {
-  functions.getNewPlace((error, city) =>{
+  functions.getNewPlace("spy",(error, city)=>{
     t.equal(error, null, 'You did not create an error');
-    t.equal(city.length, >0)
+    t.notEqual(city.length, 0, 'The city string is not empty')
     t.end();
-  })
+  });
 })

@@ -21,6 +21,9 @@ function getNewPlace (type, cb) {
   let person = params[type];
   let url = `https://nomadlist.com/api/v2/filter/city?c=2&f1_target=safety_level&f1_type=${person.safety}&f2_target=long_term_cost_in_usd&f2_type=${person.budget}`;
   request(url, (error, response, body) => {
+    if (error) {
+      return cb(error);
+    };
     if (!error && response.statusCode === 200) {
       let cities = JSON.parse(body).slugs;
       let randomCity = cities[Math.floor(Math.random() * cities.length)];
