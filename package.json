@@ -7,8 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon src/server.js"
+    "test": "PORT=8001 node_modules/tape/bin/tape tests/*.js",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",

@@ -47,7 +47,7 @@ server.register(Vision, err => {
 });
 
 server.register(Inert, ()=> {
-  let port = process.env.port || 8000;
+  let port = process.env.PORT || 8000;
   server.connection({
     port,
     host: 'localhost'
@@ -62,3 +62,5 @@ server.register(Inert, ()=> {
 Handlebars.registerHelper('link', person => {
   return `<a href='results?type=${person.type}'><li>${person.description}</li></a>`;
 });
+
+module.exports = server;
