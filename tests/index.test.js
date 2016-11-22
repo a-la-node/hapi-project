@@ -15,3 +15,11 @@ test("Check that getNewPlace doesn't create an error", t => {
     t.end();
   });
 })
+
+test("Check that getNewPlace creates an error when given an incorrect type", t => {
+  functions.getNewPlace("incorrect_type",(error, city)=>{
+    t.equal(error.success, false, "An error was successfully created");
+    t.equal(error.reason, "invalid person type", "Error message received");
+    t.end();
+  });
+})
