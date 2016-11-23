@@ -2,7 +2,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const Handlebars = require('handlebars');
-const getNewIdentity = require('./index.js');
+const getNewIdentity = require('./identity');
 const people = require('./people');
 
 var server = new Hapi.Server();
