@@ -42,9 +42,9 @@ function capitalise(string) {
 }
 
 function parallel(tasks,finalCallback) {
-  var ind = 0, store = [];
-  tasks.forEach(function(task, i) {
-    task(function(err, res){
+  let ind = 0, store = [];
+  tasks.forEach((task, i) => {
+    task((err, res) => {
       store[i] = res;
       ind++;
       if(tasks.length === ind) {
