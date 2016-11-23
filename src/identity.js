@@ -47,7 +47,7 @@ function parallel(tasks,finalCallback) {
       store[i] = res;
       ind++;
       if(tasks.length === ind) {
-        finalCallback(undefined, store);
+        finalCallback(null, store);
       }
     });
   });
