@@ -5,8 +5,10 @@
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 [![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 
-![mockup image](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png)
+![homepage mockup](https://github.com/a-la-node/hapi-project/blob/readme/mockups/Home_page.png)
+![results mockup](https://github.com/a-la-node/hapi-project/blob/readme/mockups/Results.png)
 
+[Original mockup](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png "Original Mockup")
 [UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
 
 ## What?
