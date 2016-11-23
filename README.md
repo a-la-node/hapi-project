@@ -60,7 +60,7 @@ npm install
 ```
 - To run the server:
 ```
-npm run start
+npm run devStart
 ```
 - To run tests:
 ```

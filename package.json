@@ -9,7 +9,8 @@
   "scripts": {
     "test": "PORT=8001 ./node_modules/tape/bin/tape tests/*.js",
     "start": "node src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover tests/*.js ./node_modules/.bin/codecov -t $CODECOV_TOKEN",
+    "devStart": "nodemon src/server.js",
+    "coverage": "./node_modules/.bin/istanbul cover tests/*.js && istanbul report lcov && codecov",
     "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "vision": "^4.1.0"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
     "codecov": "^1.0.1",
     "env2": "^2.1.1",
     "istanbul": "^0.4.5",
