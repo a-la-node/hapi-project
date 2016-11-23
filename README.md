@@ -7,9 +7,12 @@ Website hosted on Heroku [here](https://hapi-appi.herokuapp.com/).
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 [![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 
-![mockup image](public/images/HapiAppMockup.png)
+![homepage mockup](mockups/Home_page.png)
+![results mockup](mockups/Results.png)
 
-[UX Prototype](public/images/proto.gif)
+[Original mockup](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png "Original Mockup")
+
+[UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
 
 ## What?
 - Create a templated web app using hapi
