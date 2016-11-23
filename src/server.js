@@ -66,10 +66,6 @@ server.register(Vision, err => {
 
 server.register(Inert, ()=> {
   server.route(routes);
-  server.start(err=>{
-    if (err) throw err;
-    console.log('server running at: ' + port);
-  });
 });
 
 module.exports = server;
