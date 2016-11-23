@@ -2,10 +2,15 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const Handlebars = require('handlebars');
-const getNewIdentity = require('./index.js');
+const getNewIdentity = require('./identity');
 const people = require('./people');
 
 var server = new Hapi.Server();
+
+var port = process.env.PORT || 8000;
+server.connection({
+  port
+});
 
 function buildPeopleDescriptions(listOfPeople) {
   return Object.keys(listOfPeople).map(person => {
@@ -62,11 +67,6 @@ server.register(Vision, err => {
 });
 
 server.register(Inert, ()=> {
-  var port = process.env.PORT || 8000;
-  server.connection({
-    port,
-    host: 'localhost'
-  });
   server.route(routes);
   server.start(err=>{
     if (err) throw err;

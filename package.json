@@ -1,15 +1,16 @@
 {
   "name": "hapi-project",
   "version": "1.0.0",
-  "description": "## What? - Create a templated web app using hapi - Utilise 2 APIs - random name generator and nomad - finding working and living space - Strong test coverage",
-  "main": "server.js",
+  "description": "Create a new name and identity or find the best place to flee when you're in need. With tailor-made options for spies, z-list celebrities, bad spouses, prisoners on the run and witnesses in need of protection.",
+  "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "PORT=8001 ./node_modules/tape/bin/tape tests/*.js",
-    "start": "nodemon src/server.js",
-    "coverage": "./node_modules/.bin/istanbul cover tests/*.js",
+    "start": "node src/server.js",
+    "devStart": "nodemon src/server.js",
+    "coverage": "./node_modules/.bin/istanbul cover tests/*.js && istanbul report lcov && codecov",
     "codecov": "source config.env && ./node_modules/.bin/codecov -t $CODECOV_TOKEN"
   },
   "repository": {
@@ -30,10 +31,14 @@
     "vision": "^4.1.0"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
     "codecov": "^1.0.1",
     "env2": "^2.1.1",
     "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
     "tape": "^4.6.2"
+  },
+  "engines": {
+  "node": "6.9.1"
   }
 }

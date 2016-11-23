@@ -1,12 +1,14 @@
 # hapi-project
 
+Website hosted on Heroku [here](https://hapi-appi.herokuapp.com/).
+
 [![Build Status](https://travis-ci.org/a-la-node/hapi-project.svg?branch=master)](https://travis-ci.org/a-la-node/hapi-project)
 [![codecov](https://codecov.io/gh/a-la-node/hapi-project/branch/master/graph/badge.svg)](https://codecov.io/gh/a-la-node/hapi-project)
 [![Code Climate](https://codeclimate.com/github/a-la-node/hapi-project/badges/gpa.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 [![Issue Count](https://codeclimate.com/github/a-la-node/hapi-project/badges/issue_count.svg)](https://codeclimate.com/github/a-la-node/hapi-project)
 
-![homepage mockup](https://github.com/a-la-node/hapi-project/blob/readme/mockups/Home_page.png)
-![results mockup](https://github.com/a-la-node/hapi-project/blob/readme/mockups/Results.png)
+![homepage mockup](mockups/Home_page.png)
+![results mockup](mockups/Results.png)
 
 [Original mockup](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png "Original Mockup")
 [UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
@@ -52,3 +54,21 @@ so that... I can trick the people I encounter and obtain crucial insider informa
 ## Stretch Goals
 - Tailor users' results to their custom preferences
 - Display users' results in a more visually organised/ appealing way (hide irrelevant options)
+
+## Setup
+- To install npm dependencies:
+```
+npm install
+```
+- To run the server:
+```
+npm run devStart
+```
+- To run tests:
+```
+npm test
+```
+- To check code coverage run:
+```
+npm run coverage
+```
