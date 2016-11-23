@@ -40,12 +40,10 @@ let routes = [
     path: '/results',
     handler: (request, reply) => {
       let params = request.query;
-      getNewIdentity.getNewName(function(error, name){
-        getNewIdentity.getNewPlace(params.type, function(error, place){
-          reply.view('results-page', {
-            name: name,
-            place: place
-          });
+      getNewIdentity.getIdentity(params.type, (error, result) => {
+        reply.view('results-page', {
+          name: result[0],
+          place: result[1]
         });
       });
     }

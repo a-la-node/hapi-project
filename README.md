@@ -44,6 +44,7 @@ As a... spy
 I want to... be able to create a new identity (job/ phone no etc)
 so that... I can trick the people I encounter and obtain crucial insider information.
 
+Different users get different results based on their appetite for risk and budget. Spies are looking for somewhere cheap but happy to be risky, business executives are looking for something safer but happier to spend more money.
 
 ## How?
 - TDD using server.inject for testing

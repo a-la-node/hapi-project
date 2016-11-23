@@ -10,8 +10,7 @@ function getNewName (cb) {
       var name = JSON.parse(body).results[0].name;
       var firstName = capitalise(name.first);
       var lastName = capitalise(name.last);
-      var fullName = `${firstName} ${lastName}`;
-      return cb(null, fullName);
+      return cb(null, `${firstName} ${lastName}`);
     }
   });
 }
@@ -41,7 +40,30 @@ function capitalise(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+function parallel(tasks,finalCallback) {
+  let ind = 0, store = [];
+  tasks.forEach((task, i) => {
+    task((err, res) => {
+      store[i] = res;
+      ind++;
+      if(tasks.length === ind) {
+        finalCallback(undefined, store);
+      }
+    });
+  });
+}
+
+function getIdentity(type, cb){
+  parallel([
+    getNewName,
+    getNewPlace.bind(null, type)
+  ], (err, result) => {
+    cb(null,result);
+  });
+}
+
 module.exports = {
+  getIdentity: getIdentity,
   getNewName: getNewName,
   getNewPlace: getNewPlace
 };
