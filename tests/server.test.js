@@ -2,7 +2,7 @@ const test = require('tape');
 const server = require('../src/server.js')
 
 test('Check the index route', t => {
-  var options = {
+  let options = {
     method: 'GET',
     url:'/'
   };
@@ -14,7 +14,7 @@ test('Check the index route', t => {
 });
 
 test('Check the response content is received from the server', t => {
-  var options = {
+  let options = {
     method: 'GET',
     url:'/'
   };

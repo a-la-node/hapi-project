@@ -5,9 +5,9 @@ const Handlebars = require('handlebars');
 const getNewIdentity = require('./identity');
 const people = require('./people');
 
-var server = new Hapi.Server();
+let server = new Hapi.Server();
 
-var port = process.env.PORT || 8000;
+let port = process.env.PORT || 8000;
 server.connection({
   port
 });
