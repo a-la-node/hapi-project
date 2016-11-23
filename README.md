@@ -12,7 +12,7 @@ Website hosted on Heroku [here](https://hapi-appi.herokuapp.com/).
 
 [Original mockup](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png "Original Mockup")
 
-[UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
+[UX Prototype](https://github.com/a-la-node/hapi-project/blob/master/public/images/proto.gif "UX Prototype")
 
 ## What?
 - Create a templated web app using hapi
