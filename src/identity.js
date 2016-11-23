@@ -65,5 +65,6 @@ function getIdentity(type, cb){
 module.exports = {
   getIdentity: getIdentity,
   getNewName: getNewName,
-  getNewPlace: getNewPlace
+  getNewPlace: getNewPlace,
+  parallel: parallel
 };
