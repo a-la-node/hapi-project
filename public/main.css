@@ -3,6 +3,10 @@ body {
   font-family:'Special Elite', cursive;
 }
 
+html {
+  font-size: 1rem;
+}
+
 p, a, h1, h2 {
     color: white;
 }
@@ -64,4 +68,21 @@ p {
 
 .result-answ {
   font-size: 2.2em;
+}
+
+/* Portrait Mobile*/
+@media screen and (orientation: portrait) {
+
+  html {
+    font-size: .7rem;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .overlay {
+    right: 4%;
+    top: 100%;
+  }
 }
