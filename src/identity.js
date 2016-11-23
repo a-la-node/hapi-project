@@ -41,7 +41,30 @@ function capitalise(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+function parallel(tasks,finalCallback) {
+  var ind = 0, store = [];
+  tasks.forEach(function(task, i) {
+    task(function(err, res){
+      store[i] = res;
+      ind++;
+      if(tasks.length === ind) {
+        finalCallback(undefined, store);
+      }
+    });
+  });
+}
+
+function getIdentity(type, cb){
+  parallel([
+    getNewName,
+    getNewPlace.bind(null, type)
+  ], (err, result) => {
+    cb(null,result);
+  });
+}
+
 module.exports = {
+  getIdentity: getIdentity,
   getNewName: getNewName,
   getNewPlace: getNewPlace
 };
