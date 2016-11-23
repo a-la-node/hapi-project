@@ -1,5 +1,5 @@
 const test = require('tape');
-const functions = require('../src/index.js')
+const functions = require('../src/identity')
 
 test("Check that getNewName doesn't create an error", t => {
   functions.getNewName((error, fullName) =>{

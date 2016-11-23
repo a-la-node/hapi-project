@@ -1,7 +1,7 @@
 {
   "name": "hapi-project",
   "version": "1.0.0",
-  "description": "## What? - Create a templated web app using hapi - Utilise 2 APIs - random name generator and nomad - finding working and living space - Strong test coverage",
+  "description": "Create a new name and identity or find the best place to flee when you're in need. With tailor-made options for spies, z-list celebrities, bad spouses, prisoners on the run and witnesses in need of protection.",
   "main": "index.js",
   "directories": {
     "test": "tests"
