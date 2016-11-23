@@ -10,8 +10,7 @@ function getNewName (cb) {
       var name = JSON.parse(body).results[0].name;
       var firstName = capitalise(name.first);
       var lastName = capitalise(name.last);
-      var fullName = `${firstName} ${lastName}`;
-      return cb(null, fullName);
+      return cb(null, `${firstName} ${lastName}`);
     }
   });
 }
