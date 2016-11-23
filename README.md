@@ -11,6 +11,7 @@ Website hosted on Heroku [here](https://hapi-appi.herokuapp.com/).
 ![results mockup](mockups/Results.png)
 
 [Original mockup](https://github.com/a-la-node/hapi-project/blob/readme-update/HapiAppMockup.png "Original Mockup")
+
 [UX Prototype](https://github.com/a-la-node/hapi-project/blob/readme-update/proto.gif "UX Prototype")
 
 ## What?
