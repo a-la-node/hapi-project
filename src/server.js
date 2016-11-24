@@ -51,13 +51,14 @@ const routes = [
 ];
 
 server.register(Vision, err => {
+  if (err) throw err;
 
   server.views({
     engines: {
       html: Handlebars
     },
     relativeTo: __dirname + '/../',
-    path: 'public',
+    path: 'public/views',
     layoutPath: 'public/layout',
     helpersPath: 'public/helpers',
     layout: 'default'
