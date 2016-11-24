@@ -5,9 +5,9 @@ const Handlebars = require('handlebars');
 const getNewIdentity = require('./identity');
 const people = require('./people');
 
-let server = new Hapi.Server();
+const server = new Hapi.Server();
 
-let port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 server.connection({
   port
 });
@@ -18,7 +18,7 @@ function buildPeopleDescriptions(listOfPeople) {
   });
 }
 
-let routes = [
+const routes = [
   {
     method: 'GET',
     path: '/',
