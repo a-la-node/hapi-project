@@ -7,9 +7,9 @@ function getNewName (cb) {
       return cb(error);
     }
     if (!error && response.statusCode === 200) {
-      let name = JSON.parse(body).results[0].name;
-      let firstName = capitalise(name.first);
-      let lastName = capitalise(name.last);
+      const name = JSON.parse(body).results[0].name;
+      const firstName = capitalise(name.first);
+      const lastName = capitalise(name.last);
       return cb(null, `${firstName} ${lastName}`);
     }
   });
