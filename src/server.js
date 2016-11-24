@@ -50,7 +50,7 @@ const routes = [
   }
 ];
 
-server.register(Vision, err => {
+server.register([Vision, Inert], err => {
   if (err) throw err;
 
   server.views({
@@ -63,9 +63,7 @@ server.register(Vision, err => {
     helpersPath: 'public/helpers',
     layout: 'default'
   });
-});
 
-server.register(Inert, ()=> {
   server.route(routes);
 });
 
