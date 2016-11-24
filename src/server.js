@@ -50,21 +50,20 @@ const routes = [
   }
 ];
 
-server.register(Vision, err => {
+server.register([Vision, Inert], err => {
+  if (err) throw err;
 
   server.views({
     engines: {
       html: Handlebars
     },
     relativeTo: __dirname + '/../',
-    path: 'public',
+    path: 'public/views',
     layoutPath: 'public/layout',
     helpersPath: 'public/helpers',
     layout: 'default'
   });
-});
 
-server.register(Inert, ()=> {
   server.route(routes);
 });
 
